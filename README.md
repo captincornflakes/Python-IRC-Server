@@ -26,10 +26,10 @@ pip install bcrypt
 
 ```
 ## 🚀 Runing the Server
-python irc_server.py
+```bash
+ irc_server.py
 ```
 
-```
 ## 🛡️ Login
 /LOGIN yourpassword
 
@@ -41,21 +41,29 @@ python irc_server.py
 
 ## 👥 Roles
 Each user has a role in users.json:
+
 admin: Full control, can generate invites and manage users
+
 mod: Can manage channels (topics, kicking users)
+
 user: Regular access to chat and join channels
 
 ## 🗂️ Channel Commands
 Join/create channel: /JOIN #channelname
+
 Set topic: /TOPIC #channelname :New topic here
+
 Give op: /MODE #channelname +o nick
+
 Kick user: /KICK #channelname nick
 
 ## 🧠 Data Persistence
 Data is stored in these JSON files:
 
 users.json — User accounts, roles, IP addresses, login history
+
 channels.json — Channels and topics
+
 generated_invites.json — Invite codes with metadata
 
 ## 📁 Example users.json Entry
@@ -75,13 +83,18 @@ generated_invites.json — Invite codes with metadata
 
 ## 🔒 Security
 Passwords are stored using bcrypt
+
 IP address and login time are tracked per user
+
 Registration is restricted to invite-only
 
 ## 💡 Tips
 Only admins can generate invite codes
+
 Roles are manually editable in users.json
+
 You can reset channels or users by deleting the respective .json files (use with caution)
+
 
 
 ```
