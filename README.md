@@ -69,9 +69,56 @@ Data is stored in these JSON files:
     "register_date": "2025-04-09T12:34:56",
     "last_login": "2025-04-09T13:00:00",
     "ip_address": "192.168.1.50"
+  },
+  "John": {
+    "password": "$2b$12$....",
+    "role": "mod",
+    "invite_code": "INVITE123",
+    "register_date": "2025-04-09T12:34:56",
+    "last_login": "2025-04-09T13:00:00",
+    "ip_address": "192.168.1.50"
+  },
+  "joe": {
+    "password": "$2b$12$....",
+    "role": "user",
+    "invite_code": "INVITE123",
+    "register_date": "2025-04-09T12:34:56",
+    "last_login": "2025-04-09T13:00:00",
+    "ip_address": "192.168.1.50"
   }
 }
 ```
+
+## 📁 Example generated_invites.json Entry
+```json 
+[
+  {
+    "code": "admin",
+    "usage_count": 1,
+    "created_by": "Admin",
+    "created_at": "2025-04-09T00:46:52.126370"
+  }
+]
+```
+
+## 📁 Example channels.json Entry
+```json 
+{
+  "#general": {
+    "topic": "Welcome to General",
+    "operators": [
+      "Admin"
+    ]
+  },
+  "#chat": {
+    "topic": "Anything open chat",
+    "operators": [
+      "Admin"
+    ]
+  }
+}
+```
+
 
 ## 🔒 Security
 - Passwords are stored using bcrypt
