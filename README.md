@@ -23,8 +23,8 @@ Install the required dependency using:
 
 ```bash
 pip install bcrypt
-
 ```
+
 ## 🚀 Runing the Server
 ```bash
  irc_server.py
@@ -42,29 +42,21 @@ pip install bcrypt
 ## 👥 Roles
 Each user has a role in users.json:
 
-admin: Full control, can generate invites and manage users
-
-mod: Can manage channels (topics, kicking users)
-
-user: Regular access to chat and join channels
+- admin: Full control, can generate invites and manage users
+- mod: Can manage channels (topics, kicking users)
+- user: Regular access to chat and join channels
 
 ## 🗂️ Channel Commands
-Join/create channel: /JOIN #channelname
-
-Set topic: /TOPIC #channelname :New topic here
-
-Give op: /MODE #channelname +o nick
-
-Kick user: /KICK #channelname nick
+- Join/create channel: /JOIN #channelname
+- Set topic: /TOPIC #channelname :New topic here
+- Give op: /MODE #channelname +o nick
+- Kick user: /KICK #channelname nick
 
 ## 🧠 Data Persistence
 Data is stored in these JSON files:
-
-users.json — User accounts, roles, IP addresses, login history
-
-channels.json — Channels and topics
-
-generated_invites.json — Invite codes with metadata
+- users.json — User accounts, roles, IP addresses, login history
+- channels.json — Channels and topics
+- generated_invites.json — Invite codes with metadata
 
 ## 📁 Example users.json Entry
 
@@ -82,19 +74,12 @@ generated_invites.json — Invite codes with metadata
 ```
 
 ## 🔒 Security
-Passwords are stored using bcrypt
-
-IP address and login time are tracked per user
-
-Registration is restricted to invite-only
+- Passwords are stored using bcrypt
+- IP address and login time are tracked per user
+- Registration is restricted to invite-only
 
 ## 💡 Tips
-Only admins can generate invite codes
+- Only admins can generate invite codes
+- Roles are manually editable in users.json
+- You can reset channels or users by deleting the respective .json files (use with caution)
 
-Roles are manually editable in users.json
-
-You can reset channels or users by deleting the respective .json files (use with caution)
-
-
-
-```
